@@ -34,6 +34,10 @@
 					left: 0; 
 					translate: 10% -50%;
 				}
+
+				span {
+					display: none;
+				}
 			}
 
 			input[type="checkbox"]:checked + label {
@@ -67,7 +71,7 @@
 				z-index: 99;
 				cursor: pointer; 
 			}
-		</style>
+		</style> 
 	</head>
 	<body>
 		<h1>Switch control</h1>
@@ -78,7 +82,7 @@
 		<!-- <input type="checkbox" switch> -->
 
 		<input id="switch" type="checkbox">
-		<label for="switch"></label>
+		<label for="switch"><span>aan</span></label>
 
 		<details>
 			<summary>Demo video</summary>

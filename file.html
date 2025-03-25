@@ -10,6 +10,25 @@
 			/* Schrijf hier gewoon je CSS voor dit component */
 
 			/* Hint: Denk niet te ingewikkeld */
+
+			form {
+				display: flex; 
+				flex-direction: column;
+				align-items: start; 
+				gap: 1rem;
+			}
+
+			input[type="file"] {
+				background-color: cornflowerblue;
+				width: 50vw;
+				height: 25vh;
+				border-radius: 1rem;
+				border: 2px solid darkblue;
+				background-size: cover; 
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
 		</style>
 		<script type="module">
 			/* Schrijf hier eventueel je client-side JavaScript */
@@ -23,6 +42,17 @@
 
 			/* Hint: Via JS kun je Custom Properties in CSS aanpassen
 			   https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty */
+
+			const fileInput = document.querySelector(`input[type="file"]`)
+			
+			fileInput.addEventListener("change", handleFiles, false)
+
+			function handleFiles() {
+				const file = this.files[0]
+				const fileURL = URL.createObjectURL(file)
+
+				fileInput.style.setProperty("background-image", `url(${fileURL})`)
+			}
 		</script>
 	</head>
 	<body>

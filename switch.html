@@ -33,11 +33,20 @@
 					top: 50%; 
 					left: 0; 
 					translate: 10% -50%;
+
+					@supports not (transform: translate(0px, 0px)) {
+						&::before {
+							position: relative;
+							top: -50%;
+							left: 10%;
+						}
+					}
 				}
 
 				span {
 					display: none;
 				}
+				
 			}
 
 			input[type="checkbox"]:checked + label {
@@ -51,7 +60,16 @@
 					translate: -110% -50%; 
 					display: grid; 
 					place-items: center; 
+
+					@supports not (transform: translate(0px, 0px)) {
+						&::before {
+							position: relative;
+							top: -50%;
+							left: 110%;
+						}
+					}
 				} 
+			}
 
 			input[type="checkbox"] {
 				position: absolute; 
@@ -63,6 +81,12 @@
 
 				&:focus + label {
 					outline: 2px solid cornflowerblue;
+				}
+			}
+
+			@supports not (selector(:is(&))) {
+				label {
+					font-weight: bold; 
 				}
 			}
 		</style> 

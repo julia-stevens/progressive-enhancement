@@ -67,9 +67,17 @@
 				position: absolute; 
 				width: 1.5rem;
 				height: 1.5rem;
-				opacity: 0; 
+				/* opacity: 0;  */
 				z-index: 99;
 				cursor: pointer; 
+
+				clip-path: inset(50%);
+				white-space: nowrap;
+				overflow: hidden;
+
+				&:focus + label {
+					outline: 2px solid cornflowerblue;
+				}
 			}
 		</style> 
 	</head>

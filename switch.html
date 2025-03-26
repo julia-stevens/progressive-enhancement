@@ -19,7 +19,7 @@
 				width: 3.5rem;
 				height: 1.75rem;
 				background-color: lightgrey;
-				border-radius: 999em;
+				border-radius: 1.75rem;
 				position: relative; 	
 				transition: .3s ease-in-out;
 
@@ -42,22 +42,13 @@
 
 			input[type="checkbox"]:checked + label {
 				&::before {
-					display: none; 
-				}
-
-				&::after {
 					content: "aan";
 					color: blue;
 					font-size: 8px;
 					font-weight: bold; 
-					position: absolute; 
-					width: 1.5rem;
-					height: 1.5rem;
-					border-radius: 50%; 
 					background-color: cornflowerblue;
-					top: 50%;
-					right: 0;
-					translate: -10% -50%;
+					left: 100%;
+					translate: -110% -50%; 
 					display: grid; 
 					place-items: center; 
 				}
@@ -67,13 +58,9 @@
 				position: absolute; 
 				width: 1.5rem;
 				height: 1.5rem;
-				/* opacity: 0;  */
 				z-index: 99;
 				cursor: pointer; 
-
-				clip-path: inset(50%);
-				white-space: nowrap;
-				overflow: hidden;
+				opacity: 0;
 
 				&:focus + label {
 					outline: 2px solid cornflowerblue;
@@ -87,10 +74,13 @@
 		<!-- Hint: Safari heeft hiervoor iets bedacht, maar is dat al een standaard?
 		     Wat gebeurt er in browsers die dat nog niet ondersteunen? -->
 
-		<!-- <input type="checkbox" switch> -->
-
+		<!-- <label for="">
+			<input type="checkbox" switch>
+		</label> -->
+		
 		<input id="switch" type="checkbox">
 		<label for="switch"><span>aan</span></label>
+
 
 		<details>
 			<summary>Demo video</summary>

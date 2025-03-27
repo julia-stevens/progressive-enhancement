@@ -20,6 +20,72 @@
 			flex-direction: column;
 			gap: 1rem;
 			align-items: start;
+		}
+
+		details {
+			display: inline-block;
+			max-width: 45rem;
+			cursor: pointer;
+		}
+
+		details summary {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: .5rem;
+			width: max-content;
+			border: 1px solid black;
+			border-radius: .5rem;
+			padding: .5rem 1rem;
+		}
+
+		details summary:before {
+			content: "+";
+			display: inline-block;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.5rem;
+		}
+
+		details summary::-webkit-details-marker {
+			display: none;
+		}
+
+		details[open] summary::before {
+			rotate: 45deg;
+		}
+
+		details[open] summary {
+			border: none;
+			border-radius: .5rem .5rem 0 0;
+		}
+
+		details[open] span {
+			display: block;
+			border-radius: 0 .5rem .5rem .5rem;
+			padding: .5rem 1rem 1rem 1rem;
+		}
+
+		details:nth-of-type(1)[open] summary,
+		details:nth-of-type(1)[open] span {
+			background-color: #A675F4;
+		}
+
+		details:nth-of-type(2)[open] summary,
+		details:nth-of-type(2)[open] span {
+			background-color: #67E5BF;
+		}
+
+		details:nth-of-type(3)[open] summary,
+		details:nth-of-type(3)[open] span {
+			background-color: #FDFC85;
+		}
+
+		/* body {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			align-items: start;
 
 			details {
 				display: inline-block; 
@@ -82,13 +148,13 @@
 					}					
 				}				
 			}
-		}
+		} */
 
-		@supports not (selector(:is(&))) {
+		/* @supports not (selector(:is(&))) {
 			summary {
 				font-weight: bold; 
 			}
-		}
+		} */
 	</style>
 </head>
 

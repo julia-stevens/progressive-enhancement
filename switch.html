@@ -48,10 +48,10 @@
         background-color: grey;
         top: 50%;
         left: 0;
-        transform: translate(10%, -50%);
+        translate: 10% -50%;
     }
 
-	@supports not (translate: 10%, -50%) {
+	@supports not (translate: 10% -50%) {
 		label::before {
 			transform: translate(10%, -50%);
 		}
@@ -64,12 +64,12 @@
         font-weight: bold;
         background-color: cornflowerblue;
         left: 100%;
-        translate: -110%, -50%;
+        translate: -110% -50%;
         display: grid;
         place-items: center;
     }
 
-	@supports not (translate: -110%, -50%) {
+	@supports not (translate: -110% -50%) {
 		input[type="checkbox"]:checked + label::before {
 			transform: translate(-110%, -50%);
 		}

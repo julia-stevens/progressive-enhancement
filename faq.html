@@ -9,23 +9,14 @@
 		rel="stylesheet">
 	<link href="assets/styles.css" rel="stylesheet">
 	<style>
-		/* Schrijf hier gewoon je CSS voor dit component */
-
-		/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
-
-		/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
+		/* animate detail summary: https://www.youtube.com/watch?v=Vzj3jSUbMtI */
 
 		body {
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;
 			align-items: start;
-		}
 
-		@supports not (gap) {
-			details {
-				margin-bottom: 1rem;
-			}
 		}
 
 		details {
@@ -86,81 +77,6 @@
 		details:nth-of-type(3)[open] span {
 			background-color: #FDFC85;
 		}
-
-		/* body {
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
-			align-items: start;
-
-			details {
-				display: inline-block; 
-				max-width: 45rem;
-				cursor: pointer;
-
-				summary {
-					display: flex;
-					flex-direction: row;
-					align-items: center; 
-					gap: .5rem;
-					width: max-content;
-					border: 1px solid black;
-					border-radius: .5rem;
-					padding: .5rem 1rem;
-
-					&:before {
-					content: "+";
-					display: inline-block;
-					align-items: center; 
-					justify-content: center;
-					font-size: 1.5rem;
-				}
-
-					&::-webkit-details-marker {
-						display: none;
-					}
-				}
-
-				&:open {
-					summary::before {
-						rotate: 45deg;
-					}
-
-					summary {
-						border: none;
-						border-radius: .5rem .5rem 0 0;
-					}
-
-					span {
-						display: block; 
-						border-radius: 0 .5rem .5rem .5rem;	
-						padding: .5rem 1rem 1rem 1rem;
-					}
-				}
-
-				&:nth-of-type(1):open {
-					summary, span {
-						background-color: #A675F4;
-					}
-				}
-				&:nth-of-type(2):open {
-					summary, span {
-						background-color: #67E5BF;
-					}					
-				}
-				&:nth-of-type(3):open {
-					summary, span {
-						background-color: #FDFC85;
-					}					
-				}				
-			}
-		} */
-
-		/* @supports not (selector(:is(&))) {
-			summary {
-				font-weight: bold; 
-			}
-		} */
 	</style>
 </head>
 
@@ -194,7 +110,6 @@
 			</span>
 		</details>
 
-		<!-- Hint: Dit stukje HTML geeft het misschien al weg :) -->
 		<details>
 			<summary>Demo video</summary>
 			<video src="assets/faq.mp4" width="765" height="769" controls muted autoplay loop>

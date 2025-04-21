@@ -32,9 +32,8 @@
 			block-size: 0;
 			transition:
 				block-size 1s,
-				content-visibility 1s;
+				content-visibility 5s;
 			transition-behavior: allow-discrete;
-
 		}
 
 		details[open]::details-content {
@@ -51,6 +50,9 @@
 			border-radius: var(--border-radius);
 			padding: .5rem 1rem;
 			background-color: #fff;
+
+			transition: border-radius 1s; 
+
 			/* animate border radius here */
 		}
 
@@ -72,7 +74,7 @@
 		}
 
 		details[open] summary {
-			border-color: transparent;
+			border-color: 2px solid;
 			border-radius: var(--border-radius) var(--border-radius) 0 0;
 		}
 
@@ -81,23 +83,36 @@
 			border-radius: 0 .5rem .5rem .5rem;
 			padding: .5rem 1rem 1rem 1rem;
 			background-color: #fff;
-			/* transition hier voor bg */
-			/* transition: background-color 1s; */
+		}
+
+		details {
+			span {
+				transition: background-color 3s; 
+			}
+
+			summary {
+				transition: background-color 1s;
+				transition-delay: .8s;
+			}
 		}
 
 		details:nth-of-type(1)[open] summary,
 		details:nth-of-type(1)[open] span {
 			background-color: #A675F4;
+			transition: background-color .1s;
+
 		}
 
 		details:nth-of-type(2)[open] summary,
 		details:nth-of-type(2)[open] span {
 			background-color: #67E5BF;
+			transition: background-color .1s;
 		}
 
 		details:nth-of-type(3)[open] summary,
 		details:nth-of-type(3)[open] span {
 			background-color: #FDFC85;
+			transition: background-color .1s;
 		}
 	</style>
 </head>

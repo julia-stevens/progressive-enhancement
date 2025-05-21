@@ -13,6 +13,27 @@
 
 			/* Hint: Kijk eens naar field-sizing
 			   https://developer.mozilla.org/en-US/docs/Web/CSS/field-sizing */
+
+				form {
+					background-color: #A675F5;
+					height: 25vh;
+
+					display: flex; 
+					justify-content: center;
+					align-items: center;
+				}
+
+			    input[list="teachers"] {
+					height: max-content;
+					field-sizing: content;
+
+					padding: .5rem 1rem;
+					border: none;
+					border-radius: .5rem;
+					font-family: "Open Sans", sans-serif;
+					font-size: 1.5rem;
+					font-weight: bold; 
+				}
 		</style>
 	</head>
 
@@ -20,21 +41,25 @@
 		<h1>Favorieten picker</h1>
 
 		<form>
+			<input list="teachers">
+			<datalist id="teachers">
+				<option value="Charley Muhren"></option>
+				<option value="Cyd Stumpel"></option>
+				<option value="Dion Pieters"></option>
+				<option value="Dorien Drees"></option>
+				<option value="Joost Faber"></option>
+				<option value="Justus Sturkenboom"></option>
+				<option value="Koop Reynders"></option>
+				<option value="Krijn Hoetmer"></option>
+				<option value="Sanne 't Hooft"></option>
+				<option value="Suus ten Voorde"></option>
+			</datalist>
+		</form>
 
+		<input type="color" name="" id="">
+		
 			<!-- Hint: hoe kun je aan een invoerelement een lijst meegeven? -->
 
-			<!-- Een lijstje met docenten
-			Charley Muhren
-			Cyd Stumpel
-			Dion Pieters
-			Dorien Drees
-			Joost Faber
-			Justus Sturkenboom
-			Koop Reynders
-			Krijn Hoetmer
-			Sanne 't Hooft
-			Suus ten Voorde
-			-->
 
 			<!-- De kleurcodes van FDND:
 			#A675F5
@@ -43,9 +68,8 @@
 			#FFFC86
 			-->
 
-		</form>
 
-		<details open>
+		<details>
 			<summary>Demo video</summary>
 			<video src="assets/pickers.mp4" width="749" height="417" controls muted autoplay loop>
 				<a href="assets/pickers.mp4">assets/pickers.mp4</a>
